@@ -1,6 +1,7 @@
 package com.franctan.pdfviewpager;
 
 import com.franctan.pdfviewpager.library.adapter.PDFPagerAdapter;
+import com.franctan.pdfviewpager.library.adapter.PDFPagerAdapterWithPooling;
 import com.franctan.pdfviewpager.library.view.PDFViewPager;
 
 import android.os.Bundle;
@@ -18,6 +19,8 @@ public class RegularPDFActivity extends AppCompatActivity{
     @Bind(R.id.pdfViewPager)
     PDFViewPager mPDFViewPager;
 
+    private PDFPagerAdapterWithPooling mPdfPagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +29,13 @@ public class RegularPDFActivity extends AppCompatActivity{
 
         String pdfPath = getExternalCacheDir() + "/" + Constants.MOBY_PDF;
 
-        PDFPagerAdapter pdfPagerAdapter = new PDFPagerAdapter(this, pdfPath);
-        mPDFViewPager.setAdapter(pdfPagerAdapter);
+        mPdfPagerAdapter = new PDFPagerAdapterWithPooling(this, pdfPath, 2.0f, mPDFViewPager.getOffscreenPageLimit() );
+        mPDFViewPager.setAdapter(mPdfPagerAdapter);
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPdfPagerAdapter.cleanup();
     }
 }

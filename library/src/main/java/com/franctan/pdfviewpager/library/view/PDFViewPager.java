@@ -61,6 +61,6 @@ public class PDFViewPager extends ViewPager {
     }
 
     protected void initAdapter(Context context, String pdfPath){
-        setAdapter(new PDFPagerAdapter(context, pdfPath));
+        setAdapter(new PDFPagerAdapter(context, pdfPath, 1.0f));
     }
 }

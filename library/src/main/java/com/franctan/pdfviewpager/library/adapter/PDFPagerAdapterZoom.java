@@ -30,7 +30,7 @@ import it.sephiroth.android.library.imagezoom.ImageViewTouch;
 public class PDFPagerAdapterZoom extends PDFPagerAdapter {
 
     public PDFPagerAdapterZoom(Context context, String pdfPath) {
-        super(context, pdfPath);
+        super(context, pdfPath, 1.0f);
     }
 
     @Override
