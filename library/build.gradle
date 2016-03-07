@@ -4,20 +4,20 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'pdfviewpager'
 
-    publishedGroupId = 'es.voghdev.pdfviewpager'
+    publishedGroupId = 'com.franctan.pdfviewpager'
     libraryName = 'PdfViewPager'
     artifact = 'library'
 
     libraryDescription = 'Android widget to display PDF documents in your Views, Activities or Fragments.'
 
-    siteUrl = 'https://github.com/voghDev/PdfViewPager'
-    gitUrl = 'https://github.com/voghDev/PdfViewPager.git'
+    siteUrl = 'https://github.com/fkruege/PdfViewPager'
+    gitUrl = 'https://github.com/fkruege/PdfViewPager.git'
 
-    libraryVersion = '0.2.0'
+    libraryVersion = '0.1.0'
 
-    developerId = 'voghDev'
-    developerName = 'Olmo Gallegos'
-    developerEmail = 'vendofiatpunto@hotmail.com'
+    developerId = 'fkruege'
+    developerName = 'Franc Tan Krueger'
+    developerEmail = 'franctan@gmail.comm'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -29,10 +29,10 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 23
-        versionCode 3
-        versionName "0.2.0"
+        versionCode 1
+        versionName "0.1.0"
     }
     buildTypes {
         release {
