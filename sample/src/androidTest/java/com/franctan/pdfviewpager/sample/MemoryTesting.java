@@ -24,7 +24,6 @@ import static org.junit.Assert.fail;
 @RunWith(AndroidJUnit4.class)
 public class MemoryTesting {
 
-
     @Rule
     public IntentsTestRule<RegularPDFActivity> activityRule =
             new IntentsTestRule<>(RegularPDFActivity.class, true, false);
@@ -36,16 +35,14 @@ public class MemoryTesting {
 
     @Test
     public void test_MemoryHandling() {
-
         try {
-            swipeToEnd();
+            swipeBackAndForth();
         } catch (Exception ex) {
             fail("Error paging");
         }
-
     }
 
-    private void swipBackAndForth() {
+    private void swipeBackAndForth() {
         swipeToEnd();
         swipeToBeginning();
     }
@@ -55,13 +52,13 @@ public class MemoryTesting {
     }
 
     private void swipeToEnd() {
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 100; i++) {
             onView(withId(R.id.pdfViewPager)).perform(swipeLeft());
         }
     }
 
     private void swipeToBeginning() {
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 100; i++) {
             onView(withId(R.id.pdfViewPager)).perform(swipeRight());
         }
     }

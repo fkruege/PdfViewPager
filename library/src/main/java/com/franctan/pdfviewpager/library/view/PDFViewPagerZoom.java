@@ -15,7 +15,7 @@
  */
 package com.franctan.pdfviewpager.library.view;
 
-import com.franctan.pdfviewpager.library.adapter.PDFPagerAdapterZoom;
+import com.franctan.pdfviewpager.library.adapter.PDFZoomPagerAdapter;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -31,6 +31,6 @@ public class PDFViewPagerZoom extends PDFViewPager {
     }
 
     protected void initAdapter(Context context, String pdfPath){
-        setAdapter(new PDFPagerAdapterZoom(context, pdfPath));
+        setAdapter(new PDFZoomPagerAdapter(context, pdfPath, 1.0f, getOffscreenPageLimit()));
     }
 }

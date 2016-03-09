@@ -1,6 +1,6 @@
 package com.franctan.pdfviewpager;
 
-import com.franctan.pdfviewpager.library.adapter.PDFPagerAdapter;
+import com.franctan.pdfviewpager.library.adapter.PDFZoomPagerAdapter;
 import com.franctan.pdfviewpager.library.view.PDFViewPager;
 
 import android.os.Bundle;
@@ -13,12 +13,12 @@ import es.voghdev.pdfviewpager.R;
 /**
  * Created by fkruege on 3/6/16.
  */
-public class RegularPDFActivity extends AppCompatActivity{
+public class RegularZoomPDFActivity extends AppCompatActivity{
 
     @Bind(R.id.pdfViewPager)
     PDFViewPager mPDFViewPager;
 
-    private PDFPagerAdapter mPdfPagerAdapter;
+    private PDFZoomPagerAdapter mPdfPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class RegularPDFActivity extends AppCompatActivity{
 
         String pdfPath = getExternalCacheDir() + "/" + Constants.MOBY_PDF;
 
-        mPdfPagerAdapter = new PDFPagerAdapter(this, pdfPath, 2.0f, mPDFViewPager.getOffscreenPageLimit() );
+        mPdfPagerAdapter = new PDFZoomPagerAdapter(this, pdfPath, 2.0f, mPDFViewPager.getOffscreenPageLimit() );
         mPDFViewPager.setAdapter(mPdfPagerAdapter);
     }
 
