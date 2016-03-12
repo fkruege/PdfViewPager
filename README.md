@@ -19,11 +19,4 @@ Examples are in the sample project.
 
 Sample
 ------
-
-![Screenshot][remotePDFScreenshot]
-
-
-
-
-
-
+(screenshots/remote.gif)
