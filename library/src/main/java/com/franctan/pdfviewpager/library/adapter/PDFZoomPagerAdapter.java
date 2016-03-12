@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import it.sephiroth.android.library.imagezoom.ImageViewTouch;
+import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 
 /**
  * Created by fkruege on 3/8/16.
@@ -23,6 +24,7 @@ public class PDFZoomPagerAdapter extends PDFPagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View v = inflater.inflate(R.layout.view_zoomable_pdf_page, container, false);
         ImageViewTouch ivt = (ImageViewTouch) v.findViewById(R.id.imageViewZoom);
+        ivt.setDisplayType(ImageViewTouchBase.DisplayType.FIT_TO_SCREEN);
 
         if(renderer == null || getCount() < position)
             return v;
