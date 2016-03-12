@@ -16,7 +16,7 @@ ext {
     libraryVersion = '0.1.0'
 
     developerId = 'fkruege'
-    developerName = 'Franc Tan Krueger'
+    developerName = 'Franc Krueger'
     developerEmail = 'franctan@gmail.comm'
 
     licenseName = 'The Apache Software License, Version 2.0'
