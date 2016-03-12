@@ -19,4 +19,5 @@ Examples are in the sample project.
 
 Sample
 ------
-(screenshots/remote.gif)
+![Alt Text](https://raw.githubusercontent.com/fkruege/PdfViewPager/master/screenshots/remote.gif)
+
